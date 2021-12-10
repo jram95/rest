@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "start": "node dist/server.js",
-    "start:dev": "ts-node-dev src/server.ts"
+    "start:dev": "ts-node-dev src/server.ts",
+    "postinstall": "tsc"
   },
   "author": "",
   "license": "CC-BY-NC-ND-4.0",
