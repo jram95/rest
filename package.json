@@ -9,8 +9,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "start:dev": "ts-node-dev src/server.ts",
-    "build": "tsc",
-    // "postinstall": "tsc"
+    "build": "tsc"
   },
   "author": "",
   "license": "CC-BY-NC-ND-4.0",
