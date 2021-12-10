@@ -1,6 +1,8 @@
 {
   "name": "mark-sql-proj--guestbook",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "node dist/server.js",
     "start:dev": "ts-node-dev src/server.ts",
