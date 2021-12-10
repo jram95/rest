@@ -14,6 +14,12 @@ dotenv.config();
 // enable server to read body as JSON data
 app.use(express.json());
 
+app.get("/", (req,res) => {
+  try{
+    res.send("connected")
+  }
+})
+
 // GET menu data
 app.get("/food", async (req, res) => {
   try{
