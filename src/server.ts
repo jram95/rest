@@ -18,7 +18,11 @@ app.get("/", (req,res) => {
   try{
     res.send("connected")
   }
-})
+
+  catch(err){
+    console.error(err.message)
+  }
+});
 
 // GET menu data
 app.get("/food", async (req, res) => {
