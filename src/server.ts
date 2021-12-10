@@ -1,8 +1,8 @@
+import cors from "cors";
+
 const express = require("express");
 const dotenv = require("dotenv");
 const {Client} = require("pg");
-
-const app = express();
 
 dotenv.config();
 
@@ -13,9 +13,12 @@ const dbConfig = {
   ssl: sslSetting,
 };
 
+const app = express();
+
 const client = new Client(dbConfig);
 // enable server to read body as JSON data
 app.use(express.json());
+app.use(cors()) //add CORS support to each following route handler
 
 app.get("/", (req,res) => {
   try{

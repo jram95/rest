@@ -7,9 +7,9 @@
     "node": "16.x"
   },
   "scripts": {
-    "build": "tsc",
     "start": "node dist/server.js",
-    "start:dev": "ts-node-dev src/server.ts"
+    "start:dev": "ts-node-dev src/server.ts",
+    "postinstall": "tsc"
   },
   "author": "",
   "license": "CC-BY-NC-ND-4.0",
