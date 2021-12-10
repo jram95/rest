@@ -3,14 +3,17 @@ const dotenv = require("dotenv");
 const {Client} = require("pg");
 
 const app = express();
-const client = new Client({ database: 'restaurant' });
+
 dotenv.config();
 
-// const config = {
-//   connectionString: process.env.DATABASE_URL,
-// };
+const herokuSSLSetting = { rejectUnauthorized: false }
+const sslSetting = process.env.LOCAL ? false : herokuSSLSetting
+const dbConfig = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: sslSetting,
+};
 
-
+const client = new Client(dbConfig);
 // enable server to read body as JSON data
 app.use(express.json());
 
